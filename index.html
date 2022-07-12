@@ -7,8 +7,11 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="hola">hola</div>
+    <div id="hola">hola2</div>
     <script type="module" src="./src/index.js"></script>
-    <script type="module"> const isDev = true; if(isDev) import('./unitTest/index.spec.js');</script>
+    <script type="module">
+      const isModeDev = location.hostname === "127.0.0.1"; 
+      if(isModeDev) import('./unitTest/index.spec.js');
+    </script>
   </body>
 </html>
