@@ -20,20 +20,20 @@ wrapper('test logic', () => {
 })
 
 wrapper('test ui', () => {
-  test('Debería renederizar el texto "hola"', () => {
+  test('Debería  tener el texto "hola"', () => {
     const element = document.querySelector('#hola')
 
     if (!element) {
       return {
-        customMessage: 'No se encontró el elemento con id hola',
-        reason: false
+        reason: false,
+        customMessage: 'No se encontró el elemento con id hola'
       }
     }
 
     if (element.innerHTML !== 'hola') {
       return {
-        customMessage: 'El elemento con id hola no tiene el texto "hola"',
-        reason: false
+        reason: false,
+        customMessage: 'El elemento con id hola no tiene el texto "hola"'
       }
     }
 
