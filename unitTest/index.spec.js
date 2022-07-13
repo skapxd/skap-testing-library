@@ -1,7 +1,7 @@
-import { test, wrapper } from '../testingLibrary/index.js'
+import { test, wrapperTest } from '../testingLibrary/index.js'
 import { getDoble } from '../src/index.js'
 
-wrapper('test logic', () => {
+wrapperTest('test logic', () => {
   test('Debería retornar 4', () => {
     const result = getDoble(2)
     if (result === 4) return true
@@ -19,7 +19,7 @@ wrapper('test logic', () => {
   })
 })
 
-wrapper('test ui', () => {
+wrapperTest('test ui', () => {
   test('Debería  tener el texto "hola"', () => {
     const element = document.querySelector('#hola')
 

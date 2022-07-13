@@ -4,7 +4,7 @@
  * @param {string} message
  * @param {() => void} fn
  */
-export const wrapper = (
+export const wrapperTest = (
   message = `default message of testingLibrary.wrapper  - ${Math.random()}`,
   fn = () => console.log('default function of testingLibrary.wrapper')
 ) => {
