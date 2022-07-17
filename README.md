@@ -1,22 +1,14 @@
-# Como usar SkapTestingLibrary
+# Como usar SkapTestingLibrary [pagina](https://skapxd.github.io/skap-testing-library/)
 
-Copie y pegue el código en la consola del navegador, una etiqueta de tipo script o un archivo de javascript 
+Copie y pegue el código en una etiqueta de tipo script o un archivo con extension .js 
 
 Importe el modulo de la siguiente forma y use las funciones [wrapperTest] y [test] 
 
 ```javascript
     const init = async function () {
-        const urlLibrary = 'https://raw.githubusercontent.com/skapxd/skap-testing-library/main/testingLibrary/index.js'
-        const resp = await fetch(urlLibrary)
-        const library = await resp.text()
-        const encodedJs = encodeURIComponent(library);
-        const dataUri = `data:text/javascript;charset=utf-8,${encodedJs}`
+        const urlLibrary = 'https://skapxd.github.io/skap-testing-library/testingLibrary/index.js'
 
-        /**@type {{
-         * wrapperTest: (description: string, fn: () => void) => void
-         * test: (description: string, fnCondition: () => boolean) => void
-         * }} */
-        const { wrapperTest, test } = await import(dataUri);
+        const { wrapperTest, test } = await import(urlLibrary);
 
         wrapperTest('Probando agrupador de test', function(){
 

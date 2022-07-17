@@ -15,7 +15,7 @@ export const wrapperTest = (
 
 /**
  * @param {string} message
- * @param {() => boolean | {reason: boolean, customMessage: string}} fn false = error test | true = success test
+ * @param {() => boolean | {isSuccess: boolean, customMessage: string}} fn false = error test | true = success test
  */
 export const test = (
   message = `default message of testingLibrary.test - ${Math.random()}`,
@@ -29,8 +29,8 @@ export const test = (
   }
 
   if (typeof fn() === 'object') {
-    const { reason, customMessage } = fn()
-    if (!reason) return console.error(`❌fallido: ${message} - ${customMessage}`)
+    const { isSuccess, customMessage } = fn()
+    if (!isSuccess) return console.error(`❌fallido: ${message} - ${customMessage}`)
 
     return console.log(`✅exitoso: ${message}`)
   }

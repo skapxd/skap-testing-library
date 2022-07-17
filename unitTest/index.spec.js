@@ -30,19 +30,19 @@ wrapperTest('test logic', () => {
 })
 
 wrapperTest('test ui', () => {
-  test('Debería  tener el texto "hola"', () => {
-    const element = document.querySelector('#hola')
+  test('Debería  tener el titulo "Dame un numero que te lo multiplico por 2"', () => {
+    const element = document.querySelector('p')
 
     if (!element) {
       return {
-        reason: false,
+        isSuccess: false,
         customMessage: 'No se encontró el elemento con id hola'
       }
     }
 
-    if (element.innerHTML !== 'hola') {
+    if (element.innerHTML !== 'Dame un numero que te lo multiplico por 2') {
       return {
-        reason: false,
+        isSuccess: false,
         customMessage: 'El elemento con id hola no tiene el texto "hola"'
       }
     }
