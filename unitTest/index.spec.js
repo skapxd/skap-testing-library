@@ -17,6 +17,16 @@ wrapperTest('test logic', () => {
     console.log('Debería retornar 8 ->', result)
     return false
   })
+
+  test('Debería ser una excepción al mandarle un string', () => {
+    try {
+      const result = getDoble('n')
+      console.log('result ->', result)
+      return false
+    } catch (error) {
+      return true
+    }
+  })
 })
 
 wrapperTest('test ui', () => {
